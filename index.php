@@ -40,14 +40,7 @@ $app->post('/', function ($request, $response)
 	{
 		if ($event['type'] == 'message')
 		{
-			if($event['message']['type'] == 'text')
-			{
-				
-				// --------------------------------------------------------------- NOTICE ME...
-				
-				$inputMessage = $event['massage']['text'];
-
-				if($inputMessage[0] == '/')
+			if($inputMessage[0] == '/')
 				{
 					$inputMessage = ltrim($inputMessage,'/');
 					$inputSplit = explode(' ',$inputMessage,2);
@@ -64,15 +57,6 @@ $app->post('/', function ($request, $response)
 					$result = $bot->replyMessage($event['replyToken'], $outputMessage);
 					return $result->getHTTPStatus() . ' ' . $result->getRawBody();
 				}
-				$inputMessage = $event['message']['text'];
-				$outputMessage = new TextMessageBuilder($inputMessage);
-				
-				$result = $bot->replyMessage($event['replyToken'], $outputMessage);
-				return $result->getHTTPStatus() . ' ' . $result->getRawBody();
-				
-				// --------------------------------------------------------------- ...SENPAI!
-				
-			}
 		}
 	}
 

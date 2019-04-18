@@ -40,6 +40,7 @@ $app->post('/', function ($request, $response)
 	{
 		if ($event['type'] == 'message')
 		{
+			$inputMessage = event['massage']['text'];
 			if($inputMessage[0] == '/')
 				{
 					$inputMessage = ltrim($inputMessage,'/');

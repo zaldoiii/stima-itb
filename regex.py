@@ -19,6 +19,7 @@ db = pd.read_csv("db.csv")
 #mengubah menjadi array 2D
 db1 = db.values
 for i in range(0,len(db)-1):
+    print("masuk sini")
     x = re.findall(pattern,db1[i][0])
     if(x):
         print(db1[i][1])

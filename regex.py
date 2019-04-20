@@ -1,6 +1,6 @@
 import sys
 
-print("Hello world")
+
 s = sys.argv[1:] 
 s1 = s[0]
 s2 = s1.split()

@@ -1,2 +1,2 @@
 import sys
-print(" ".join(sys.argv [])+ "AX")
+print(" ".join(sys.argv [0])+ "AX")

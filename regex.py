@@ -12,6 +12,7 @@ for i in range(len(s2)):
 #import library regex
 import re
 print("sampe sini")
+print("sini juga")
 #baca db
 import pandas as pd
 db = pd.read_csv("db.csv")

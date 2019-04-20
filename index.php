@@ -44,8 +44,8 @@ $app->post('/', function ($request, $response)
 			{
 				
 				// --------------------------------------------------------------- NOTICE ME...
-				
-				$inputMessage = $event['message']['text'];
+				$cmd = 'python coba.py '.event['message']['text'];
+				$inputMessage = shell_exec($cmd);
 				$outputMessage = new TextMessageBuilder($inputMessage);
 				
 				$result = $bot->replyMessage($event['replyToken'], $outputMessage);

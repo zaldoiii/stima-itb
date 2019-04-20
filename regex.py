@@ -15,7 +15,7 @@ import re
 #baca db
 import pandas as pd
 db = pd.read_csv("db.csv")
-
+print("berhasil membaca db")
 #mengubah menjadi array 2D
 db1 = db.values
 for i in range(0,len(db)-1):

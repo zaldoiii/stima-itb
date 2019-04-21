@@ -80,8 +80,10 @@ l1.append("Nama Python dipilih karena kecintaan pembuatnya pada acara televisi M
 
 
 for i in range(0,len(l)-1):
-    pat = pattern
-    t = l[i]
+    pat = pattern.lower()
+    t = l[i].lower()
     x = re.findall(pat,t)
     if(x):
         print(l1[i])
+        break
+

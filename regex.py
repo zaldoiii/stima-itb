@@ -3,7 +3,7 @@ import sys
 
 s = sys.argv[1:] 
 s1 = s[0]
-
+print(s)
 s2 = s1.split()
 
 pattern = "^"

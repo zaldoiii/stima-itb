@@ -2,15 +2,11 @@ import sys
 
 
 s = sys.argv[1:] 
-s1 = s[0]
-print(s)
-s2 = s1.split()
 
-pattern = "^"
+
+pattern = ".*"
 for i in range(1,len(sys.argv)):
     pattern = pattern + sys.argv[i] + "." + "*" 
-
-print(pattern)
 
 #import library regex
 import re

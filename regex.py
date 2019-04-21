@@ -3,11 +3,14 @@ import sys
 
 s = sys.argv[1:] 
 s1 = s[0]
-s2 = s1.split()
-pattern = ""
-for i in range(len(s2)):
-    pattern = pattern + s2[i] 
 
+s2 = s1.split()
+
+pattern = "^"
+for i in range(len(s2)):
+    pattern = pattern + s2[i] + "." + "*" 
+
+print(pattern)
 
 #import library regex
 import re
@@ -85,4 +88,3 @@ for i in range(0,len(l)-1):
     x = re.findall(pat,t)
     if(x):
         print(l1[i])
-        break

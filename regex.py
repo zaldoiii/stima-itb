@@ -4,9 +4,9 @@ import sys
 s = sys.argv[1:] 
 s1 = s[0]
 s2 = s1.split()
-pattern = "^"
+pattern = ""
 for i in range(len(s2)):
-    pattern = pattern + s2[i] + "." + "*" 
+    pattern = pattern + s2[i] 
 
 
 #import library regex
@@ -86,4 +86,3 @@ for i in range(0,len(l)-1):
     if(x):
         print(l1[i])
         break
-
